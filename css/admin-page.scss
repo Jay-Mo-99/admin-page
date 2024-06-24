@@ -44,7 +44,7 @@ body{
     grid-column: 1 / span 2;;
     grid-row: 1;
 
-    background-color: blue;
+    background-color: white;
     color:#808080;
     width:100%;
     height:70px;
@@ -57,14 +57,19 @@ body{
     grid-template-columns: 4fr 4fr 1fr 1fr 1fr;
     grid-template-rows: 70px;
     grid-template-areas: search empty bell mail;
+
+    /*shadow*/
+    box-shadow: 0 4px 4px -4px #808080;
+
 }
 
 %nav-item-margin{
     margin-top:20px;
+    text-align: center;
 }
 
 .nav-empty{
-    width:50%;
+    width:60%;
     grid-area: empty;
 
 }
@@ -88,12 +93,18 @@ body{
     @extend %nav-item-margin;
 
 }
+.nav-menu{
+    display:none;
+   
+
+}
+
 
 /*nav-search*/
 .nav-search{
     grid-area: search;
     margin-top:15px;
-    margin-left: 100px;
+    margin-left: 70px;
     width:15%;
     height:50%;
     display:flex;
@@ -112,7 +123,7 @@ body{
 
 .searchTerm{
     width:100%;
-    border: 1px solid #343A40;
+    border: 0.5px solid #EAECEF;
     border-right: none;
     padding: 5px;
     height: 100%;
@@ -193,6 +204,12 @@ body{
     grid-column: 2;
     grid-row: 2;
     background-color: green;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.dashboard-card{
+
 }
 
 /**/
@@ -209,5 +226,48 @@ body{
         width:200px;
 
 
+    }
+}
+
+
+/*media-query*/
+@media screen and (max-width: 768px){
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right:40px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nav-menu"
+        
+    }
+    .nav-search,
+    .nav-icon-bell,
+    .nav-icon-mail,
+    .nav-name {
+        display: none;
+    }
+    .nav-menu {
+        grid-area: nav-menu;
+        display: block;
+        color:#343A40;
+        font-size: large;
+        width: 30px;
+        height: 100px;
+        text-align: center;
+        padding-top:10px;
+        
+  
+        
+    }
+    .nav-menu-i{
+        font-size:large;
+        border: 0.5px solid #EAECEF;
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left:20px;
+        padding-right:20px;
+        
     }
 }
