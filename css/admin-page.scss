@@ -16,12 +16,16 @@ body에도 margin 0px 주면 나중에 편함 */
 div{
     box-sizing: border-box;
 }
+html{
+    height : 100%;
+}
 body{
+
     margin:0px;
     font-family: "GMarket-Light";
     background-color: blue;
     width:100%;
-    height: 100vh;
+    height : 100%;
 
     display:grid;
     grid-template-columns: 50px 1fr;
@@ -168,7 +172,8 @@ body{
     background-color: #494CB4;
     color:white;
     width:55px;
-    height:100%;
+    height : 100%;
+    min-height: 100% !important;
     z-index: 2;
     position: absolute;
 
@@ -200,16 +205,68 @@ body{
 /**/
 /*main-content*/
 /**/
-.main-content{
+.main-content {
     grid-column: 2;
     grid-row: 2;
     background-color: green;
     padding-top: 40px;
     padding-left: 20px;
+    h3{
+        margin-left:10px;
+        margin-bottom:20px;
+    }
 }
 
-.dashboard-card{
+/**/
+/*main-content
+  card part*/
 
+
+.dashboard-card{
+   
+    background-color: white;
+    width:95%;
+    max-width: 90%;
+    overflow:hidden;
+
+
+    margin:10px;
+    padding:30px;
+
+    border-radius: 6px;
+    display: inline-block;
+
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5);
+
+
+    p{
+        margin-bottom:10px;
+    }
+}
+
+.card-left{
+    float:left;
+    color:#2A2929;
+}
+
+.card-right{
+    font-size:35px;
+    float:right;
+    padding:10px; 
+    color:#808080; 
+}
+
+.card-skyblue{
+    border-left: solid 5px #87CEEB;
+}
+.card-green{
+    border-left: solid 5px #3FC95A;
+}
+.card-purple{
+    border-left: solid 5px #494CB4;
+}
+.card-yellow{
+    border-left: solid 5px #FFCB55;
 }
 
 /**/
