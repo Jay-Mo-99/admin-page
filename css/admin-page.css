@@ -143,12 +143,13 @@ body {
   grid-row: 2;
   background-color: #494CB4;
   color: white;
+  padding: 20px;
   width: 55px;
   height: 100%;
-  min-height: 100% !important;
   z-index: 2;
   position: absolute;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .side-menu a {
   position: absolute;
@@ -181,6 +182,7 @@ body {
   color: #212529;
   padding-top: 40px;
   padding-left: 20px;
+  overflow-y: auto; /*main-content에 내용 추가되고 화면 넘어가면 스크롤로 넘어가게*/
 }
 .main-content h3 {
   margin-left: 10px;
@@ -193,7 +195,7 @@ body {
 .dashboard-card {
   background-color: white;
   width: 95%;
-  max-width: 90%;
+  max-width: 95%;
   overflow: hidden;
   margin: 10px;
   padding: 30px;
@@ -240,7 +242,7 @@ body {
 .tasks-content, .earning-overview-contetnt {
   background-color: white;
   width: 95%;
-  max-width: 90%;
+  max-width: 95%;
   border-radius: 7px;
   margin: 10px;
   margin-top: 20px;
@@ -275,7 +277,7 @@ body {
 .badge {
   float: right;
   background-color: #007BFF;
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .badge::after {
@@ -296,6 +298,7 @@ body {
 /*media-query*/
 @media screen and (max-width: 768px) {
   .nav {
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -315,9 +318,9 @@ body {
     color: #343A40;
     font-size: large;
     width: 30px;
-    height: 100px;
     text-align: center;
-    padding-top: 10px;
+    padding: 10px;
+    margin-right: 25px;
   }
   .nav-menu-i {
     font-size: large;
@@ -326,5 +329,6 @@ body {
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    border-radius: 6px;
   }
 }/*# sourceMappingURL=admin-page.css.map */
